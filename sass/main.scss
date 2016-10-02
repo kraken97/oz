@@ -1,0 +1,150 @@
+@import "flex";
+$main_blue:#303f9f;
+$main_font:#311b92;
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 500;
+  line-height: 26.4px;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #673ab7;
+}
+
+.container {
+  flex-grow: 1;
+  min-height: 100vh;
+}
+
+.flex-small {
+  flex: 1 1 400px;
+}
+
+.flex-big {
+  flex: 2 0.5 1000px;
+  background: whitesmoke;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 500px;
+  background: white;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  max-width: 500px;
+  .site-header {
+    padding: 30px;
+    border-bottom: 3px solid #303f9f;
+    margin-bottom: 20px;
+  }
+  ul {
+    li {
+      padding: 20px 5px;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  a:active {
+    color: #303f9f;
+  }
+}
+
+.content {
+  flex-direction: column;
+  margin-left: 500px
+}
+
+.reverse{
+  flex-direction: row-reverse;
+}
+
+.block {
+  display: flex;
+  flex-wrap: wrap;
+  margin:  40px;
+  height: 500px;
+  .block-content{
+    background: white;
+    padding: 50px;
+    flex: 1 1 600px;
+    .block-header{
+      text-align: center; 
+      font-size: 2rem;
+      padding: 30px;
+    }
+    .block-text{
+      text-align: justify;
+      font-size: 1.1rem;
+    }
+  }
+  .block-image{
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+    flex: 1 1 400px;
+  }
+}
+.card{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.hero {
+  height: 100vh;
+  background: url(https://c1.staticflickr.com/9/8419/29409793624_98702717f2_k.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  .hero-content {
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    text-align: center;
+    h1 {
+      font-size: 4rem;
+      line-height: 100px;
+      color: whitesmoke;
+      border-bottom: 1px solid white;
+      margin: 10px;
+    }
+    p {
+      color: darken(whitesmoke, 20%);
+      font-size: 1.7rem;
+    }
+  }
+}
+
+
+.social{
+  ul{
+    display: flex;
+    li{
+      &:hover{
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.4);
+      }
+      padding: 10px;
+      margin: 5px;
+      background: rgba(0,0,0,0.2);
+      transition: all .3s ease;
+    }
+  }
+}
+.spacer{
+  height: 50%;
+  width: 50%;
+  flex-flow: 1;
+}
